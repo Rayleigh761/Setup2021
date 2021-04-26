@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Estilo customizado -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/setup.js"></script>
+
+    <title>Setup LegalBox</title>
+  </head>
+  <body style= "overflow:hidden;">
+    
+        <div class="container" ><!--Container-->
+            <div class="card">
+                <div class="row">
+                    <div class="col-12 lg-auto">
+                        <div class="text-center">
+                            <img id="porfile-img" class="" src="imagem/logo-2020.png">
+                            
+                            <!--Inicio form-->
+                            <form class="d-flex justify-content-center">
+                                <div class="row mt-3 mb-4 ml-5 mr-2">
+                                    <div class="col-auto">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-user fa-lg"></i>
+                                                </span>
+                                            </div>
+                                            <input type="text" name="ds_login" id="ds_login" class="form-control" placeholder="Login" required>
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary text-light" type="submit">Buscar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form><!--Fim form-->
+
+                            <div> <!--Botoes de cadastro-->
+                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal-lg">Novo Usuário</button>
+                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="">Cadastrar Aba</button>
+                            </div><!--Fim Botoes de cadastro-->
+
+                            <!--Modal-->
+                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xlg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-light" id="myLargeModalLabel">Novo Usuário</h5>
+                                            <button type="button" class="close" data-dimiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form class="row"><!--Inicio form modal-->
+                
+                                            <div class="col-6">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="fas fa-user-circle fa-lg"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" name="ds_nome" id="ds_nome" class="form-control" placeholder="Nome" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="fas fa-user-circle fa-lg"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" name="ds_sobrenome" id="ds_sobrenome" class="form-control" placeholder="Sobrenome" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="fas fa-address-card fa-lg"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" name="ds_rg" id="ds_rg" class="form-control" placeholder="RG" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="fas fa-address-card fa-lg"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" name="ds_cpfcnpj" id="ds_cpfcnpj" class="form-control" placeholder="CPF" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <label>Usuário Cadastro</label>
+                                                <div class="mb-3">
+                                                    <select class="form-control" id="cd_usuario_cadastro" name="cd_usuario_cadastro">
+                                                        <option value="">Selecione</option>
+                                                        <option value="0">teste0</option>
+                                                        <option value="1">teste1</option>
+                                                        <option value="2">teste2</option>
+                                                    </select>
+                                                </div>
+                                            </div>  
+
+                                            <div class="col-3">
+                                                <label>Tipo Usuário</label>
+                                                <div class="mb-3">
+                                                    <select class="form-control" id="ds_tipo" name="ds_tipo">
+                                                        <option value="">Selecione</option>
+                                                        <option value="0">teste0</option>
+                                                        <option value="1">teste1</option>
+                                                        <option value="2">teste2</option>
+                                                    </select>
+                                                </div>
+                                            </div> 
+
+                                            <div class="col-3">
+                                                <label>Grupo Usuário</label>
+                                                <div class="mb-3">
+                                                    <select class="form-control" id="cd_tipo_redirecionamento" name="cd_tipo_redirecionamento">
+                                                        <option value="">Selecione</option>
+                                                        <option value="0">teste0</option>
+                                                        <option value="1">teste1</option>
+                                                        <option value="2">teste2</option>
+                                                    </select>
+                                                </div>
+                                            </div> 
+
+                                            <div class="col-6">
+                                                <label>Empresa</label>
+                                                <div class="mb-3">
+                                                    <select class="form-control" id="ds_empresa">
+                                                        <option value="">Selecione</option>
+                                                        <option value="0">teste0</option>
+                                                        <option value="1">teste1</option>
+                                                        <option value="2">teste2</option>
+                                                    </select>
+                                                </div>
+                                            </div> 
+
+                                            <div class="col-6">
+                                                <label>É Funcionário?</label>
+                                                <div class="mb-3">
+                                                    <select class="form-control" id="stFuncionario" onchange="getTipoUsuario2();">
+                                                        <option value="">Selecione</option>
+                                                        <option value="0">Sim</option>
+                                                        <option value="1">Não</option>
+                                                    </select>
+                                                </div>
+                                            </div> 
+                                            
+                                            <div class="col-3">
+                                                <label>Centro de Custo</label>
+                                                <div class="mb-3">
+                                                    <select class="form-control" id="cd_centroDeCusto"> 
+                                                        <option value="">Selecione</option>
+                                                        <option value="0">teste0</option>
+                                                        <option value="1">teste1</option>
+                                                        <option value="2">teste2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <div class="mb-3" id="divLiderancaDireta">
+                                                    <label>Liderança Direita</label>
+                                                    <select id="liderancaDireita" class="form-control"> 
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <label>Cargo</label>
+                                                <div class="mb-3">
+                                                    <select class="form-control" id="cargo">
+                                                        <option value="">Selecione</option>
+                                                        <option value="0">teste0</option>
+                                                        <option value="1">teste1</option>
+                                                        <option value="2">teste2</option>
+                                                    </select>
+                                                </div>
+                                            </div> 
+
+                                            <div class="col-1">
+                                                <label>É lider?</label>
+                                                <div class="mb-3">
+                                                    <input type="checkbox" name="lider" id="lider">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-2">
+                                                <label>Ingresso na sociedade</label>
+                                                <div class="mb-3">
+                                                    <input class="form-control" type="date" id="ingressoNaSociedade">
+                                                </div>
+                                            </div>
+
+                                            <!--Continuaaaaaaaa-->
+
+                                            
+                                        </form><!--Fim Form modal-->
+
+                                    </div>   
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-dimiss="modal">Fechar</button>
+                                            <button type="button" class="btn btn-sucess" id="idCadastro" onclick="enviar()">Adicionar</button>
+                                        </div> 
+                                  </div>
+                                </div>
+                              </div><!--Fim modal-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--Fim Container-->
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/setup.js"></script>
+  </body>
+</html>
