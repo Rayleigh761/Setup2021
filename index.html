@@ -14,6 +14,9 @@
     <!-- Estilo customizado -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/setup.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+
 
     <title>Setup LegalBox</title>
   </head>
@@ -71,7 +74,7 @@
                                                             <i class="fas fa-user-circle fa-lg"></i>
                                                         </span>
                                                     </div>
-                                                    <input type="text" name="ds_nome" id="ds_nome" class="form-control" placeholder="Nome" required>
+                                                    <input type="text" name="ds_nome" id="ds_nome" class="form-control" placeholder="Nome">
                                                 </div>
                                             </div>
 
@@ -82,7 +85,7 @@
                                                             <i class="fas fa-user-circle fa-lg"></i>
                                                         </span>
                                                     </div>
-                                                    <input type="text" name="ds_sobrenome" id="ds_sobrenome" class="form-control" placeholder="Sobrenome" required>
+                                                    <input type="text" name="ds_sobrenome" id="ds_sobrenome" class="form-control" placeholder="Sobrenome">
                                                 </div>
                                             </div>
 
@@ -93,7 +96,7 @@
                                                             <i class="fas fa-address-card fa-lg"></i>
                                                         </span>
                                                     </div>
-                                                    <input type="text" name="ds_rg" id="ds_rg" class="form-control" placeholder="RG" required>
+                                                    <input type="text" name="ds_rg" id="ds_rg" class="form-control" placeholder="RG">
                                                 </div>
                                             </div>
 
@@ -104,7 +107,7 @@
                                                             <i class="fas fa-address-card fa-lg"></i>
                                                         </span>
                                                     </div>
-                                                    <input type="text" name="ds_cpfcnpj" id="ds_cpfcnpj" class="form-control" placeholder="CPF" required>
+                                                    <input type="text" name="ds_cpfcnpj" id="ds_cpfcnpj" class="form-control" placeholder="CPF">
                                                 </div>
                                             </div>
 
@@ -215,6 +218,57 @@
 
                                             <!--Continuaaaaaaaa-->
 
+                                            <!--Input email lbca-->
+                                            <div  id="divEmail"  style="display:none">
+                                                <label data-error="Email Invalido" data-sucess="Email Valido" for="ds_email"></label>
+                                                    <div class="col-12">
+                                                      <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                          <span class="material-icons input-group-text">
+                                                            <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+                                                          </span>
+                                                        </div>
+                                                          <input class="form-control validate" type="text" id="ds_email"  ng-model="email1" placeholder="Email">
+                                                        <div class="input-group-append">
+                                                          <input class="form-control" type="text" id="ds_email2" disabled="" value="@lbca.com.br">
+                                                        </div>
+                                                      </div>
+                                                  </div>
+                                               </div>
+                                            <!--Fim-->
+                                      
+                                            <!--Input email não funcionario-->
+
+                                            <div  id="divLogin" style="display:none;padding-left:172px">
+                                            <label for="ds_login" ></label>
+                                                <div class="col-11">
+                                                  <div class="input-group mb-3">
+                                                     <span class="material-icons input-group-text">
+                                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                                     </span>
+                                                    <input class="form-control" type="email" id="ds_login" disabled placeholder="Login" value="email">
+                                                  </div>
+                                                </div>
+                                            </div>
+                                      
+                                            <!--Fim-->
+
+                                            <!--Input senha-->
+
+                                            <div  id="divSenha" style="display:none">
+                                                <label for="ds_senha"></label>
+                                                <div class="col-11">
+                                                  <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                      <span class="material-icons input-group-text">
+                                                        <i class="fa fa-key fa-lg" aria-hidden="true"></i>
+                                                      </span>
+                                                    </div>
+                                                    <input class="form-control" type="text" id="ds_senha" placeholder="Senha">
+                                                  </div>
+                                                </div>
+
+                                            <!--Fim-->
                                             
                                         </form><!--Fim Form modal-->
 
@@ -233,7 +287,6 @@
             </div>
         </div><!--Fim Container-->
 
-    <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

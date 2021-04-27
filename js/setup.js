@@ -62,3 +62,55 @@ function validarCampo(){
     } 
 
 }
+
+function getTipoUsuario2(){
+
+    let funcionario = document.querySelector('#stFuncionario').value
+
+    if (funcionario == '1') {
+
+      $('#divEmail').removeClass()
+      $('#divLogin').removeClass()
+      $('#divSenha').removeClass()
+      $('#divEmail').show();
+      $('#divLogin').show();
+      $('#divSenha').hide();
+      $('#ds_email2').hide();
+      $('#idCadastro').show();
+
+
+      $('#divEmail').addClass("input-field col s4");
+      $('#divLogin').addClass("input-field col s4");
+      $('#divSenha').addClass("input-field col s4");
+      $('#idCadastro').attr('onclick','cadastraUsuarioExterno();');
+
+    }
+    else if (funcionario == '0'){
+
+      $('#divEmail').removeClass()
+      $('#divLogin').removeClass()
+      $('#divSenha').removeClass()
+      $('#divEmail2').removeClass()
+      $('#idCadastro')
+
+      $('#ds_email2').show();
+      $('#divEmail').show("input-field col s3");
+      $('#divLogin').show("input-field col s3");
+      $('#divSenha').show("input-field col s3");
+      $('#idCadastro').show();
+      $('#idCadastro').attr('onclick','enviar();');
+      
+
+
+      
+    }
+
+    else if (funcionario == ''){
+      $('#divEmail').hide();
+      $('#divLogin').hide();
+      $('#divSenha').hide();
+      $('#divEmail2').hide();
+      $('#idCadastro').hide();
+
+    }
+  }  
