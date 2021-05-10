@@ -59,7 +59,7 @@
                                   <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title text-light" id="myLargeModalLabel">Novo Usuário</h5>
-                                            <button type="button" class="close" data-dimiss="modal" aria-label="Close">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                     </div>
@@ -123,7 +123,7 @@
                                                 </div>
                                             </div>  
 
-                                            <div class="col-3">
+                                            <div class="col-2">
                                                 <label>Tipo Usuário</label>
                                                 <div class="mb-3">
                                                     <select class="form-control" id="ds_tipo" name="ds_tipo">
@@ -135,7 +135,7 @@
                                                 </div>
                                             </div> 
 
-                                            <div class="col-3">
+                                            <div class="col-2">
                                                 <label>Grupo Usuário</label>
                                                 <div class="mb-3">
                                                     <select class="form-control" id="cd_tipo_redirecionamento" name="cd_tipo_redirecionamento">
@@ -146,6 +146,18 @@
                                                     </select>
                                                 </div>
                                             </div> 
+
+                                            <div class="col-2">
+                                                <label>Centro de Custo</label>
+                                                <div class="mb-3">
+                                                    <select class="form-control" id="cd_centroDeCusto"> 
+                                                        <option value="">Selecione</option>
+                                                        <option value="0">teste0</option>
+                                                        <option value="1">teste1</option>
+                                                        <option value="2">teste2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
 
                                             <div class="col-6">
                                                 <label>Empresa</label>
@@ -171,16 +183,16 @@
                                             </div> 
                                             
                                             <div class="col-3">
-                                                <label>Centro de Custo</label>
+                                                <label>Cargo</label>
                                                 <div class="mb-3">
-                                                    <select class="form-control" id="cd_centroDeCusto"> 
+                                                    <select class="form-control" id="cargo">
                                                         <option value="">Selecione</option>
                                                         <option value="0">teste0</option>
                                                         <option value="1">teste1</option>
                                                         <option value="2">teste2</option>
                                                     </select>
                                                 </div>
-                                            </div>
+                                            </div> 
 
                                             <div class="col-3">
                                                 <div class="mb-3" id="divLiderancaDireta">
@@ -191,9 +203,9 @@
                                             </div>
 
                                             <div class="col-3">
-                                                <label>Cargo</label>
+                                                <label>Docusign</label>
                                                 <div class="mb-3">
-                                                    <select class="form-control" id="cargo">
+                                                    <select class="form-control" id="cd_docusign">
                                                         <option value="">Selecione</option>
                                                         <option value="0">teste0</option>
                                                         <option value="1">teste1</option>
@@ -274,7 +286,7 @@
 
                                     </div>   
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger" data-dimiss="modal">Fechar</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
                                             <button type="button" class="btn btn-sucess" id="idCadastro" onclick="enviar()">Adicionar</button>
                                         </div> 
                                   </div>

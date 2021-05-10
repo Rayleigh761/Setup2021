@@ -29,9 +29,6 @@ function validarCampo(){
     }if(document.querySelector('#ds_sobrenome').value ==""){
         alert('Preencha o campo Sobrenome!')
         return false;
-    }if(document.querySelector('#ds_rg').value ==""){
-        alert('Preencha o campo Rg!')
-        return false;
     }if(document.querySelector('#ds_cpfcnpj').value ==""){
         alert('Preencha o campo Cpf/Cnpj!')
         return false;
@@ -58,7 +55,7 @@ function validarCampo(){
         return false;
     }  
      else {
-        console.log('Usuario Cadastrado com sucesso!')
+        alert('Usuario Cadastrado com sucesso!')
     } 
 
 }
