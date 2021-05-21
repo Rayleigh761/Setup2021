@@ -34,3 +34,17 @@
 .modal-header{
   background-color: #262947;
 } 
+
+/*Responsivo
+
+#divEmail{
+  display:none;
+  flex-basis: 100%;
+}
+
+#divLogin{
+  display:inline;
+  flex-basis: 100%;
+  padding-right: 50%;
+}
+*/
