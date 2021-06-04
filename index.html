@@ -123,7 +123,7 @@
                                                 </div>
                                             </div>  
 
-                                            <div class="col-3">
+                                            <div class="col-2">
                                                 <label>Tipo Usuário</label>
                                                 <div class="mb-3">
                                                     <select class="form-control" id="ds_tipo" name="ds_tipo">
@@ -135,7 +135,17 @@
                                                 </div>
                                             </div> 
 
-                                            <div class="col-3">
+                                            <div class="col-2">
+                                                <label>Usuário suporte?</label>
+                                                <div class="mb-3">
+                                                    <select class="form-control" id="suporte" name="suporte" onchange="getUsuarioSuporte()">
+                                                        <option value="">Selecione</option>
+                                                        <option value="0">sim</option>
+                                                    </select>
+                                                </div>
+                                            </div> 
+
+                                            <div class="col-2">
                                                 <label>Grupo Usuário</label>
                                                 <div class="mb-3">
                                                     <select class="form-control" id="cd_tipo_redirecionamento" name="cd_tipo_redirecionamento">
@@ -249,6 +259,26 @@
                                                </div>
                                             <!--Fim-->
                                       
+                                               <!--Input email lbca suporte-->
+                                               <div  id="divEmail3"  style="display:none;">
+                                                <label data-error="Email Invalido" data-sucess="Email Valido" for="ds_email3"></label>
+                                                    <div class="col-11">
+                                                      <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                          <span class="material-icons input-group-text">
+                                                            <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+                                                          </span>
+                                                        </div>
+                                                          <input class="form-control validate" type="text" id="ds_email3"  ng-model="email" placeholder="Email">
+                                                        <div class="input-group-append">
+                                                          <input class="form-control" type="text" id="ds_email3" disabled="" value="@Suplbca.com.br">
+                                                        </div>
+                                                      </div>
+                                                  </div>
+                                               </div>
+                                            <!--Fim-->
+
+
                                             <!--Input email não funcionario-->
 
                                             <div  id="divLogin" style="display:none;">
@@ -265,6 +295,7 @@
                                       
                                             <!--Fim-->
 
+
                                             <!--Input senha-->
 
                                             <div  id="divSenha" style="display:none">
@@ -280,7 +311,7 @@
                                                   </div>
                                                 </div>
 
-                                            <!--Fim-->
+                                                <!--Fim-->
                                             
                                         </form><!--Fim Form modal-->
 

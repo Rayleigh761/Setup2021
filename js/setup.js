@@ -63,7 +63,7 @@ function validarCampo(){
 function getTipoUsuario2(){
 
     let funcionario = document.querySelector('#stFuncionario').value
-
+    
     if (funcionario == '1') {
 
       $('#divEmail').removeClass()
@@ -111,3 +111,35 @@ function getTipoUsuario2(){
 
     }
   }  
+
+function getUsuarioSuporte(){
+
+  let suporte = document.querySelector('#suporte').value
+
+  if (suporte == '0') {
+    $('#divEmail').removeClass()
+    $('#divLogin').removeClass()
+    $('#divSenha').removeClass()
+    $('#divEmail3').removeClass()
+    $('#idCadastro')
+
+    $('#ds_email3').show();
+    $('#divEmail3').show("input-field col s3");
+    $('#divLogin').show("input-field col s3");
+    $('#divSenha').show("input-field col s3");
+    $('#idCadastro').show();
+    $('#idCadastro').attr('onclick','enviar();');
+    $('#stFuncionario').attr('disabled','disabled');
+
+  }
+
+  else if (suporte == ''){
+    $('#divEmail').hide();
+    $('#divLogin').hide();
+    $('#divSenha').hide();
+    $('#divEmail3').hide();
+    $('#idCadastro').hide();
+    $('#stFuncionario').removeAttr('disabled');
+  }
+
+}  
