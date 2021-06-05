@@ -11,7 +11,7 @@ function enviar(){
     let grupoUsuario = document.querySelector('#cd_tipo_redirecionamento').value
     let empresa = document.querySelector('#ds_empresa').value
     let funcionario = document.querySelector('#stFuncionario').value
-    let centroCusto = document.querySelector('#cd_centroDeCusto').value
+    //let centroCusto = document.querySelector('#cd_centroDeCusto').value
     let lideranca = document.querySelector('#liderancaDireita').value
     let cargo = document.querySelector('#cargo').value
     let lider = document.querySelector('#lider').value
@@ -22,6 +22,8 @@ function enviar(){
 
 
 function validarCampo(){
+
+  getUsuarioSuporte()
 
     if(document.querySelector('#ds_nome').value == ""){
         alert('Preencha o campo nome!')
@@ -47,10 +49,12 @@ function validarCampo(){
     }if(document.querySelector('#stFuncionario').value ==""){
         alert('Selecione o tipo Funcionário!')
         return false;
-    }if(document.querySelector('#cd_centroDeCusto').value ==""){
+    }  
+
+   /* if(document.querySelector('#cd_centroDeCusto').value ==""){
         alert('Selecione o centro de custo!')
         return false;
-    }if(document.querySelector('#cargo').value == ""){
+    }*/if(document.querySelector('#cargo').value == ""){
         alert('Selecione o Cargo!')
         return false;
     }  
@@ -114,7 +118,11 @@ function getTipoUsuario2(){
 
 function getUsuarioSuporte(){
 
+  getTipoUsuario2()
+
+
   let suporte = document.querySelector('#suporte').value
+
 
   if (suporte == '0') {
     $('#divEmail').removeClass()
@@ -128,8 +136,11 @@ function getUsuarioSuporte(){
     $('#divLogin').show("input-field col s3");
     $('#divSenha').show("input-field col s3");
     $('#idCadastro').show();
+    $('#divEmail').hide();
     $('#idCadastro').attr('onclick','enviar();');
-    $('#stFuncionario').attr('disabled','disabled');
+    $('#stFuncionario').attr('disabled','disabled').val(0);
+
+
 
   }
 
@@ -139,7 +150,7 @@ function getUsuarioSuporte(){
     $('#divSenha').hide();
     $('#divEmail3').hide();
     $('#idCadastro').hide();
-    $('#stFuncionario').removeAttr('disabled');
+    $('#stFuncionario').removeAttr('disabled').val("");
   }
 
 }  
